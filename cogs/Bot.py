@@ -22,7 +22,7 @@ class Bot(commands.Cog):
 	
 	
 	@commands.slash_command(name='vex')
-	async def vex(self):
+	async def vex(self, inter: ACI):
 		pass
 	
 	
