@@ -16,14 +16,9 @@ from utils.assets import Colors as C
 from utils.dominant_color import dominant_color
 
 
-def _restart():
-	python = sys.executable
-	os.execl(python, python, * sys.argv)
-
-
 class Bot(commands.Cog):
 	def __init__(self, bot):
-		self.bot: commands.Bot = bot 
+		self.bot: commands.Bot = bot
 	
 	
 	@commands.slash_command(name='vex')
@@ -37,7 +32,7 @@ class Bot(commands.Cog):
 	async def info(
 		self,
 		inter: ACI):
-			await inter response.defer()
+			await inter.response.defer()
 			
 			avatar_color = self.bot.user.display_avatar.with_size(16)
 			async with aiohttp.ClientSession() as session:
